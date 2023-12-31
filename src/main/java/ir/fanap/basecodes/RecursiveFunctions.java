@@ -1,3 +1,5 @@
+package ir.fanap.basecodes;
+
 public class RecursiveFunctions {
     public static void main(String[] args) {
         int n = 4;
