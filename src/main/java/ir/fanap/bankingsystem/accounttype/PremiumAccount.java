@@ -32,16 +32,14 @@ public class PremiumAccount extends BankAccount implements InvestmentCapable, Lo
     @Override
     public void withdraw(double amount) {
         this.balance -= amount;
-        if (this.balance < 0) {
+        if (this.balance <= INTEREST_RATE) {
             throw new WithdrawalFailureException();
         }
     }
 
     @Override
     public double getBalance() {
-        if (this.balance >= INTEREST_RATE) {
-            this.balance -= INTEREST_RATE;
-        }
+        this.balance -= INTEREST_RATE;
         return this.balance;
     }
 

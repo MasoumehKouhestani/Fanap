@@ -1,7 +1,8 @@
 package ir.fanap.e5;
 
 import ir.fanap.e4.Country;
-import ir.fanap.e5.exception.CountryNullFieldException;
+import ir.fanap.e5.exception.CountryNullNameException;
+import ir.fanap.e5.exception.CountryNullPopulationException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +25,7 @@ public class Q2 {
         for (String code : countryMap.keySet()) {
             try {
                 countryMap.get(code).print();
-            } catch (CountryNullFieldException e) {
+            } catch (CountryNullNameException | CountryNullPopulationException e) {
                 System.out.println(e.getClass().getSimpleName() + " has been thrown!");
             }
         }
