@@ -1,4 +1,6 @@
 ### IntelliJ IDEA ###
+.idea
+Fanap.iml
 out/
 target/
 !**/src/main/**/out/
